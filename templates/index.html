@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block title %}Coffee & Wi-Fi{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+<div class="jumbotron text-center">
+  <div class="container">
+
+    <div class="mb-3">
+      <a href="/">
+        <img src="{{ url_for('static', filename='img/com.gif') }}" alt="Coffee Computer Icon">
+      </a>
+    </div>
+
+    <h3 class="display-5">☕️ Café Spots & Internet Access 📶</h3>
+    <h4 class="mb-3">Klang Valley Area</h4>
+
+    <hr class="my-4" />
+
+    <p class="lead">Looking for a great café to work in with reliable power and Wi-Fi?</p>
+
+    <ul class="list-unstyled">
+      <li>✔️ Power outlet availability</li>
+      <li>✔️ Wi-Fi speed</li>
+      <li>✔️ Coffee quality</li>
+    </ul>
+
+    <hr class="my-4" />
+
+    <div class="mb-3">
+      <a class="btn btn-warning btn-lg custom-btn" href="{{ url_for('cafes') }}" role="button">
+        Show Me!
+      </a>
+    </div>
+
+    <div class="mb-3">
+      <a class="btn btn-warning btn-lg custom-btn" href="/add" role="button">
+        Add +
+      </a>
+    </div>
+      <!----<div>
+      <span style="font-style: italic;">@Koleksi 77</span>
+    </div>---->
+
+      <!---<footer class="footer"> @Koleksi 77 </footer> kalau guna footer ada contoh dalam css--->
+
+<footer class="footer">
+ <div class="text-center mt-4">
+        <div class="crafted-box">
+         <a>
+            Crafted with ❤️ by Koleksi 77 · 2024 - {{ current_year }}
+          </a>
+        </div>
+      </div>
+
+</footer>
+
+
+  </div>
+</div>
+{% endblock %}

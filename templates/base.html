@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    {% block styles %}
+    <!-- Load Bootstrap-Flask CSS here -->
+    {{ bootstrap.load_css() }}
+    <!-- Link to the styles.css here to apply styling to all the child templates.-->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+
+
+
+    {% endblock %}
+
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+
+
+  <body>
+    {% block content %}{% endblock %}
+  <script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const narration = `
+      Welcome to Café Spots & Internet Access.
+      Explore top café spots in Klang Valley.
+      We highlight places with power outlets, fast Wi-Fi, and great coffee.
+      `;
+
+    const utterance = new SpeechSynthesisUtterance(narration);
+    utterance.rate = 1.05;
+    utterance.pitch = 1.1;
+    utterance.lang = 'en-US';
+
+    const voices = speechSynthesis.getVoices();
+    const friendlyVoice = voices.find(v => v.lang === 'en-US' && v.name.includes("Google"));
+    if (friendlyVoice) utterance.voice = friendlyVoice;
+
+    speechSynthesis.speak(utterance);
+  });
+</script>
+  </body>
+</html>

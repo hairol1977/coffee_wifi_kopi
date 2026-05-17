@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block content %}
+<!-- Main container for the content -->
+
+
+ <head>
+ <link rel="stylesheet" href="../static/css/styles.css">
+
+
+<div class="container">
+
+  <div class="px-1 py-2 my-2 text-center">
+  <a href="/">
+    <img src="static/img/com.gif" alt="com">
+    </a>
+      <a class="nav-link px-lg-3 py-3 py-lg-4" href="{{ url_for('cafes') }}">
+         <button type="button" class="btn btn-warning btn-lg custom-btn">Show Me!</button>
+      </a>
+</div>
+
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <!-- Page header -->
+      <h2>Insert a new café into the database</h2>
+
+      <!-- Render the form -->
+      {{ render_form(form, novalidate=True) }}
+
+<p>
+      <p>All of these are honest and personal opinions, not intended to be defamatory</p>
+      <p>This website is for learning purposes only, not a real website.</p>
+
+        <!-- Link to see all cafes -->
+      <p class="space-above">
+        <a href="{{ url_for('cafes') }}">See all cafes</a>
+      </p>
+      </p>
+
+    </div>
+  </div>
+</div>
+
+</head>
+
+
+
+<footer class="footer mb-4">
+  <div class="text-center mt-4">
+    <div class="crafted-box">
+      <a>
+        Crafted with ❤️ by Koleksi 77 · 2024 - {{ current_year }}
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+{% endblock %}
+

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+body {
+    background-color: #3E2F2A; /* Darker coffee shop brown */
+    color: #FFFFFF; /* White font color */
+}
+
+a {
+    color: #D5A021; /* Golden yellow for links */
+
+}
+
+/*kalau guna footer nak italic kan @koleksi 77*/
+
+.footer {
+  text-align: center;
+  font-size: 16px;
+  color: #FFD700; /* Golden */
+}
+
+.footer {
+  font-style: italic;
+}
+
+
+
+.jumbotron {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+    color: #FFFFFF; /* White font color */
+    background-color: #3E2F2A; /* Coffee shop brown = background */
+}
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.custom-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.custom-btn {
+    width: 120px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+
+/*copyright*/
+
+.copyright {
+    font-size: 14px; /* Adjust the size as needed */
+}
+
+.copyright {
+    color: #FFFFFF; /* Adjust the color as needed */
+}
+
+.copyright::after {
+    content: " 2025"; /* Adjust the year as needed */
+}
+
+button {
+  background-color: blue;
+  color: black;
+}
+
+.btn-submit {
+  background-color: yellow;
+}
+
+/* button submit bawah ni */
+.btn-primary {
+  background-color: yellow; /*#28a745; /* Green */
+  color: black
+}
+
